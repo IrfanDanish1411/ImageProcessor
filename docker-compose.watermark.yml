@@ -8,7 +8,7 @@ services:
   watermark-1:
     build: .
     container_name: watermark-1
-    command: python services/watermark_service.py
+    command: python -u services/watermark_service.py
     ports:
       - "50054:50054"
     environment:
@@ -17,7 +17,7 @@ services:
   watermark-2:
     build: .
     container_name: watermark-2
-    command: python services/watermark_service.py
+    command: python -u services/watermark_service.py
     ports:
       - "50064:50054"
     environment:
@@ -26,7 +26,7 @@ services:
   watermark-3:
     build: .
     container_name: watermark-3
-    command: python services/watermark_service.py
+    command: python -u services/watermark_service.py
     ports:
       - "50074:50054"
     environment:

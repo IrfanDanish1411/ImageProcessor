@@ -8,7 +8,7 @@ services:
   resize-1:
     build: .
     container_name: resize-1
-    command: python services/resize_service.py
+    command: python -u services/resize_service.py
     ports:
       - "50052:50052" # Exposed on Host Port 50052
     environment:
@@ -17,7 +17,7 @@ services:
   resize-2:
     build: .
     container_name: resize-2
-    command: python services/resize_service.py
+    command: python -u services/resize_service.py
     ports:
       - "50062:50052" # Exposed on Host Port 50062
     environment:
@@ -26,7 +26,7 @@ services:
   resize-3:
     build: .
     container_name: resize-3
-    command: python services/resize_service.py
+    command: python -u services/resize_service.py
     ports:
       - "50072:50052" # Exposed on Host Port 50072
     environment:
